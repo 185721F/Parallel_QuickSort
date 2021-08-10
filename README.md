@@ -11,5 +11,4 @@ Parallel_QuickSort.pyにプロセスで並列化、スレッドで並列化、�
 
 #実行方法  
 pythonの実行環境を整えてもらった状態で、そのまま実行してもらって良い。  
-concurrent.futuresやrandom、timeなどはpythonの標準ライブラリであるためインストールなどはしなくて良い。  
-ソートされた中身が見たい場合は39,49,56行目のコメントアウトを外すと見れるようになる。  
+concurrent.futuresやrandom、timeなどはpythonの標準ライブラリであるためインストールなどはしなくて良い。   
