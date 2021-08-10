@@ -1,7 +1,7 @@
 # 並列分散処理課題(Parallel_QuickSort)
 pythonのconcurrent.futuresを利用した並列分散処理を行ったクイックソートと逐次処理のクイックソートを比べるためのリポジトリ
 
-#実験内容：
+#実験内容
 クイックソートを並列化し速度の向上を図る。
 使用モジュールはpythonのConcurrent.fututes.ThreadPoolExecutorとConcurrent.futures.ProcessPoolExecutorを使用した。
 
