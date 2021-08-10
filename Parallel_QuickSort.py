@@ -33,20 +33,18 @@ arr = ([random.randint(0,10**4) for i in range(10000)])
 start_process = time.time()
 with confu.ProcessPoolExecutor(max_workers=os.cpu_count()) as executor:
     futures_process = [executor.submit(quickSort(arr))]
+    (done, notdone) = confu.wait(futures_process)
 print(time.time()-start_process)
 
-answer_process = quickSort(arr)
-#print(answer_process)
 print('並列処理(プロセス)↑')
-
 #スレッドで並列処理された結果が出力される。
 start_thread = time.time()
 with confu.ThreadPoolExecutor(max_workers=os.cpu_count()) as executor:
-    futures_thread = executor.submit(quickSort(arr))
+    futures_thread = [executor.submit(quickSort(arr))]
+    (done, notdone) = confu.wait(futures_thread)
 print(time.time()-start_thread)
 
-answer_thread = quickSort(arr)
-#print(answer_thread)
+
 print('並列処理(スレッド)↑')
 
 #逐次処理されたクイックソートの結果が出力される。
