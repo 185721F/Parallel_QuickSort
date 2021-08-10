@@ -1,0 +1,2 @@
+# Parallel_QuickSort
+pythonのconcurrent.futuresを利用した並列分散処理を行ったクイックソートと逐次処理のクイックソートを比べるためのリポジトリ
